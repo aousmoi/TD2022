@@ -16,10 +16,11 @@ public class CompteDao {
 		return compteList;
 	}
 
-	public void ajouterCompte(int solde, int decouvertMaximale, int debitMaximale, User user) {
+	public Compte ajouterCompte(int solde, int debitMaximale, int decouvertMaximale , User user) {
 		String id = String.format("%04d", new Random().nextInt(10000));
-		Compte compte = new Compte(Integer.parseInt(id), solde, decouvertMaximale, debitMaximale, user);
+		Compte compte = new Compte(Integer.parseInt(id), solde, debitMaximale, decouvertMaximale , user);
 		this.compteList.add(compte);
+		return compte;
 	}
 
 	public Compte getCompte(int numeroCompte) {

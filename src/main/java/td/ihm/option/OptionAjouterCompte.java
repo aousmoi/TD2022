@@ -37,18 +37,16 @@ public class OptionAjouterCompte implements IOption {
         
 		System.out.println("Saisissez le solde du compte :");
 		int solde = Integer.parseInt(this.scanner.next());
-        
+         
+		System.out.println("Saisissez le decouvert Maximale du compte :");
+        int debitMaximale = Integer.parseInt(this.scanner.next());
         
 		System.out.println("Saisissez le debit Maximale du compte :");
 		int decouvertMaximale = Integer.parseInt(this.scanner.next());
         
-        
-		System.out.println("Saisissez le decouvert Maximale du compte :");
-        int debitMaximale = Integer.parseInt(this.scanner.next());
-        
 
         User user = this.userService.ajouterUser(nom, prenom);
-		this.compteService.ajouterCompte(user,solde,decouvertMaximale,debitMaximale);
+		this.compteService.ajouterCompte(user,solde,debitMaximale,decouvertMaximale);
 		
 		System.out.println("Le compte initiale pour "+ nom + " " +prenom + " est cree");
 		

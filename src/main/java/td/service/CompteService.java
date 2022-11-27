@@ -17,8 +17,8 @@ public class CompteService {
 		this.compteDao = compteDao;
 	}
 
-	public void ajouterCompte(User user, int solde, int decouvertMax, int debitMax) {
-		this.compteDao.ajouterCompte(solde, decouvertMax, debitMax, user);
+	public Compte ajouterCompte(User user, int solde, int debitMax , int decouvertMax) {
+		return this.compteDao.ajouterCompte(solde, debitMax, decouvertMax, user);
 	}
 
 	public List<Compte> getCompteList() {

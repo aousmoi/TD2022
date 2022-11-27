@@ -22,9 +22,9 @@ public class Menu {
 		this.scanner = scanner;
 		
 		options.put(1, new OptionAjouterCompte(scanner, compteService , userService));
-		options.put(2, new OptionListerComptes(compteService));
-		options.put(3, new OptionCrediterCompte(scanner,compteService));
-		options.put(4, new OptionDebiterCompte(scanner,compteService));
+		options.put(2, new OptionCrediterCompte(scanner,compteService));
+		options.put(3, new OptionDebiterCompte(scanner,compteService));
+		options.put(4, new OptionListerComptes(compteService));
 
 		
 	}

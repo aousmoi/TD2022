@@ -12,7 +12,7 @@ public class Compte {
 
 	
 
-	public Compte(int numeroCompte, float slode, int decouvertMaximale, int debitMaximale, User user) {
+	public Compte(int numeroCompte, float slode, int debitMaximale , int decouvertMaximale, User user) {
 		super();
 		this.numeroCompte = numeroCompte;
 		this.decouvertMaximale = decouvertMaximale;
