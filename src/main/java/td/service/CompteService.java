@@ -30,7 +30,13 @@ public class CompteService {
 		return this.compteDao.getCompte(numeroCompte);
 	}
 	
-	public void creditercompte(int numeroCompte , float montant) {
+	public void crediterCompte(int numeroCompte , float montant) {
 		this.compteDao.crediterCompte(numeroCompte, montant);
 	}
+	
+	
+	public void debiterCompte(int numeroCompte , float montant) {
+		this.compteDao.debiterCompte(numeroCompte, montant);
+	}
+	
 }

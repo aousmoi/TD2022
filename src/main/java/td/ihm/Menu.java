@@ -7,6 +7,7 @@ import java.util.Scanner;
 import td.ihm.option.IOption;
 import td.ihm.option.OptionAjouterCompte;
 import td.ihm.option.OptionCrediterCompte;
+import td.ihm.option.OptionDebiterCompte;
 import td.ihm.option.OptionListerComptes;
 import td.service.CompteService;
 import td.service.UserService;
@@ -23,7 +24,7 @@ public class Menu {
 		options.put(1, new OptionAjouterCompte(scanner, compteService , userService));
 		options.put(2, new OptionListerComptes(compteService));
 		options.put(3, new OptionCrediterCompte(scanner,compteService));
-		
+		options.put(4, new OptionDebiterCompte(scanner,compteService));
 
 		
 	}
