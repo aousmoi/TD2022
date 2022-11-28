@@ -13,8 +13,6 @@ public class OptionAjouterCompte implements IOption {
 	private UserService userService;
 	
 	
-	
-	
 	public OptionAjouterCompte(Scanner scanner, CompteService compteService , UserService userService) {
 		super();
 		this.scanner = scanner;
@@ -38,10 +36,10 @@ public class OptionAjouterCompte implements IOption {
 		System.out.println("Saisissez le solde du compte :");
 		int solde = Integer.parseInt(this.scanner.next());
          
-		System.out.println("Saisissez le decouvert Maximale du compte :");
+		System.out.println("Saisissez le debit Maximale du compte :");
         int debitMaximale = Integer.parseInt(this.scanner.next());
         
-		System.out.println("Saisissez le debit Maximale du compte :");
+		System.out.println("Saisissez le decouvert Maximale du compte :");
 		int decouvertMaximale = Integer.parseInt(this.scanner.next());
         
 

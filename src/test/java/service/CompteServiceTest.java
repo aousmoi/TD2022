@@ -41,7 +41,7 @@ public class CompteServiceTest {
 	
 	
 	@Test
-	public void crediterCompteTest_casPassat() {
+	public void crediterCompteTest() {
 		
 		User user = this.userService.ajouterUser("Anass", "OUSMOI");
 		Compte compte = this.compteService.ajouterCompte(user, 0, 1000, 100);
@@ -57,7 +57,7 @@ public class CompteServiceTest {
 	public ExpectedException thrown = ExpectedException.none();
 	
 	@Test
-	public void crediterCompteTest_casDebitMax() {
+	public void debiterCompteTest_casException() {
 		
 		User user = this.userService.ajouterUser("Anass", "OUSMOI");
 		Compte compte = this.compteService.ajouterCompte(user, 0, 1000, 100);
@@ -65,7 +65,7 @@ public class CompteServiceTest {
 		assertTrue(compte.getSolde() == 0);
 	
 		thrown.expect(DebitMaximaleException.class);
-		this.compteService.crediterCompte(compte.getNumeroCompte(), 1100);
+		this.compteService.debiterCompte(compte.getNumeroCompte(), 1001);
 	}
 
 
