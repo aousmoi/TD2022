@@ -16,9 +16,9 @@ public class CompteDao {
 		return compteList;
 	}
 
-	public Compte ajouterCompte(int solde, int debitMaximale, int decouvertMaximale , User user) {
+	public Compte ajouterCompte(int solde, int debitMaximale, int decouvertMaximale, User user) {
 		String id = String.format("%04d", new Random().nextInt(10000));
-		Compte compte = new Compte(Integer.parseInt(id), solde, debitMaximale, decouvertMaximale , user);
+		Compte compte = new Compte(Integer.parseInt(id), solde, debitMaximale, decouvertMaximale, user);
 		this.compteList.add(compte);
 		return compte;
 	}
@@ -41,13 +41,7 @@ public class CompteDao {
 				int index = this.compteList.indexOf(compte);
 
 				float nouveauMontant = compte.getSolde() + montant;
-
-				if (nouveauMontant > compte.getDebitMaximale()) {
-
-					throw new DebitMaximaleException();
-				}
-
-				compte.setSlode(compte.getSolde() + montant);
+				compte.setSlode(nouveauMontant);
 
 				this.compteList.set(index, compte);
 			}
@@ -60,7 +54,13 @@ public class CompteDao {
 			if (numeroCompte == compte.getNumeroCompte()) {
 
 				int index = this.compteList.indexOf(compte);
-				compte.setSlode(compte.getSolde() - montant);
+
+				if (montant > compte.getDebitMaximale()) {
+					throw new DebitMaximaleException();
+				}
+
+				float nouveauMontant = compte.getSolde() - montant;
+				compte.setSlode(nouveauMontant);
 
 				this.compteList.set(index, compte);
 			}
