@@ -27,6 +27,7 @@ public class BanqueApp {
 
 			
 			UserService userService = new UserService(userDao);
+			
 			CompteService compteService = new CompteService(compteDao);
 
 			logger.info("Lancement Application");

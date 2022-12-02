@@ -15,6 +15,7 @@ public class UserService {
 		this.userDao = userDao;
 	}
 
+	
 	public User ajouterUser(String nom , String prenom) {
 		return this.userDao.ajouterUser(nom, prenom);
 	}
