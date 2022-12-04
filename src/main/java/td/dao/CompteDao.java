@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
 import td.exception.DebitMaximaleException;
 import td.model.Compte;
 import td.model.User;
 
+@Component
 public class CompteDao {
 
 	List<Compte> compteList = new ArrayList<Compte>();

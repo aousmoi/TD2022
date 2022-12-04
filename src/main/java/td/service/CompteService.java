@@ -2,11 +2,13 @@ package td.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import td.dao.CompteDao;
-import td.dao.CompteDaoFichier;
 import td.model.Compte;
 import td.model.User;
 
+@Component
 public class CompteService {
 
 	private CompteDao compteDao;

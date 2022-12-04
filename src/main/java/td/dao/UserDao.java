@@ -3,8 +3,11 @@ package td.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import td.model.User;
 
+@Component
 public class UserDao {
 
 	List<User> userList = new ArrayList<User>();

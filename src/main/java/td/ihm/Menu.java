@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.springframework.stereotype.Component;
+
 import td.ihm.option.IOption;
 import td.ihm.option.OptionAjouterCompte;
 import td.ihm.option.OptionCrediterCompte;
@@ -12,6 +14,7 @@ import td.ihm.option.OptionListerComptes;
 import td.service.CompteService;
 import td.service.UserService;
 
+@Component
 public class Menu {
 
 	private Map<Integer, IOption> options = new HashMap();

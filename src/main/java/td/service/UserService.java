@@ -2,9 +2,12 @@ package td.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import td.dao.UserDao;
 import td.model.User;
 
+@Component
 public class UserService {
 	
 	private UserDao userDao;

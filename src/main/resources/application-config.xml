@@ -8,6 +8,7 @@ http://www.springframework.org/schema/util
 http://www.springframework.org/schema/util/spring-util.xsd">
 	<!-- Configuration d'un bean dont l'identifiant est "scanner". Il est créé 
 		à partir de la classe "java.util.Scanner" -->
+
 	<bean id="scanner" class="java.util.Scanner">
 		<constructor-arg>
 			<!-- Référencement du champ static "System.in" -->
@@ -24,11 +25,11 @@ http://www.springframework.org/schema/util/spring-util.xsd">
 	<bean id="userService" class="td.service.UserService">
 		<constructor-arg ref="userDao"></constructor-arg>
 	</bean>
-	
+
 	<bean id="compteService" class="td.service.CompteService">
 		<constructor-arg ref="compteDao"></constructor-arg>
 	</bean>
-	
-	
-	
+
+
+
 </beans>
